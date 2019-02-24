@@ -1,0 +1,7 @@
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\bin\Debug\ConsoleApp_isd_1.exe.config
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\bin\Debug\ConsoleApp_isd_1.exe
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\bin\Debug\ConsoleApp_isd_1.pdb
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\obj\Debug\ConsoleApp_isd_1.csprojAssemblyReference.cache
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\obj\Debug\ConsoleApp_isd_1.csproj.CoreCompileInputs.cache
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\obj\Debug\ConsoleApp_isd_1.exe
+D:\студия\ConsoleApp_isd_1\ConsoleApp_isd_1\obj\Debug\ConsoleApp_isd_1.pdb
