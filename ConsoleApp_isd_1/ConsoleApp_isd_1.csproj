@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comands\FileOperation\CreateFile.cs" />
+    <Compile Include="Comands\FileOperation\DeleteFile.cs" />
     <Compile Include="Comands\FileOperation\ParamSearch.cs" />
     <Compile Include="Comands\FileOperation\Search.cs" />
     <Compile Include="Comands\IComand.cs" />
@@ -50,9 +52,6 @@
     <Compile Include="LogFile\IRecordFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkWhithFile\CreateFile.cs" />
-    <Compile Include="WorkWhithFile\DeleteFile.cs" />
-    <Compile Include="WorkWhithFile\IWorkFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

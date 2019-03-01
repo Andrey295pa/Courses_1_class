@@ -12,17 +12,15 @@ namespace ConsoleApp_isd_1
 {
     class Program
     {
-       // static Dictionary<string, IComand> supportedComands = new Dictionary<string, IComand>();
         static Dictionary<string, IComand> supportedComands = new Dictionary<string, IComand>();
         static  DataRerord dataRerord = new DataRerord();
-
 
         static void registr()
         {
             supportedComands.Add("search", new Search());
             supportedComands.Add("cs_search", new ParamSearch());
-            //supportedComands.Add(1, new Search());
-            //supportedComands.Add(2, new ParamSearch());
+            supportedComands.Add("create_file", new CreateFile());
+            supportedComands.Add("delete_file", new DeleteFile());
 
         }
 
@@ -32,37 +30,35 @@ namespace ConsoleApp_isd_1
         }
 
         static void Main(string[] args)
-        {
-           // File.Create("D:\\testIsd.txt");
-           // File.Delete("D:\\test.txt");
-            dataRerord.WriteDataOfFile(args);
-            supportedComands[args[0]].execute(args);
-            
+        { 
+            dataRerord.WriteDataOfFile(args, supportedComands[args[0]].GetType().Name.ToString());
+            try
+            {
+                supportedComands[args[0]].execute(args);
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Incorrectly entered values ​​to create");
+                Console.WriteLine("Enter new value");
+                dataRerord.ErrorRecord(ex.Message);
+
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Path is a zero-length string");
+                Console.WriteLine("Enter new value");
+                dataRerord.ErrorRecord(ex.Message);
+
+            }
+            catch (Exception ex)
+            {
+                dataRerord.ErrorRecord(ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+
+
             Console.ReadKey();
-
-            //dataRerord.WriteDataOfFile("Andrey2", "1984_2");
-            // Console.WriteLine(nameof(dataRerord.GetType));
-            // Console.ReadKey();
-
-            //string path = args[0];
-            //string param = args[1];
-
-            // supportedComands["search"].execute("D:", ".txt");
-
-
-            //if (path == "search")
-            //{
-            //    IComand comand = new Search();
-            //    comand.execute(path, string.Empty);
-            //}
-
-            //if (path == "cs_search")
-            //{
-            //IComand comand = new ParamSearch();
-            //comand.execute(path,param);
-            //}
-
-            
+         
         }
     }
 }

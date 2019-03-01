@@ -8,6 +8,6 @@ namespace ConsoleApp_isd_1.LogFile
 {
     interface IRecordFile
     {
-        void WriteDataOfFile(string []param);
+        void WriteDataOfFile(string []param,string nameOperation);
     }
 }
