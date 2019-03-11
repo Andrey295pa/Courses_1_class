@@ -15,7 +15,8 @@ namespace ConsoleApp_isd_1
         static Dictionary<string, IComand> supportedComands = new Dictionary<string, IComand>();
         static  DataRerord dataRerord = new DataRerord();
 
-        static void registr()
+        static void registr() //как насчет того чтобы вынести регистрацию команд в IoC контейнер или сделать автоматической 
+            //тоесть без добавления каждой новой команды в список регистрируемых, система чтоб сама находила все классы реализующих команды
         {
             supportedComands.Add("search", new Search());
             supportedComands.Add("cs_search", new ParamSearch());
