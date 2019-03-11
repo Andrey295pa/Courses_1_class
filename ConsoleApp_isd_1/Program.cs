@@ -36,7 +36,7 @@ namespace ConsoleApp_isd_1
             {
                 supportedComands[args[0]].execute(args);
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) //как насчет того чтоб вынести логирование и обработку исключений в некий базовый клас для команд?
             {
                 Console.WriteLine("Incorrectly entered values ​​to create");
                 Console.WriteLine("Enter new value");
