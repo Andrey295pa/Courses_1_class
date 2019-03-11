@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp_isd_1.LogFile.DataRecord
+namespace ConsoleApp_isd_1.LogFile.DataRecord //может имеет смысл использовать какуюто стороннюю либу для логирования? чтоб не писать свой класс
 {
     class DataRerord:IRecordFile
     {
